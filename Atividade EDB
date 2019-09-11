@@ -1,0 +1,58 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+typedef struct aluno{
+    int matricula;
+    char nome[25];
+    float nota1, nota2, nota3, media;
+}Aluno;
+
+
+Aluno aluno[5];
+int main()
+{
+    int i, x;
+    float maior;
+
+    for(i=0;i<5;i++){
+        printf("Digite seu nome\n");
+        scanf("%s",&aluno[i].nome);
+        printf("Digite sua matrícula\n");
+        scanf("%d",&aluno[i].matricula);
+        printf("Digite sua primeira nota\n");
+        scanf("%f",&aluno[i].nota1);
+        printf("Digite sua segunda nota\n");
+        scanf("%f",&aluno[i].nota2);
+        printf("Digite sua terceira nota\n");
+        scanf("%f",&aluno[i].nota3);
+        aluno[i].media = (aluno[i].nota1 + aluno[i].nota2 + aluno[i].nota3)/3;
+
+    }
+
+                maior = aluno[0].media;
+                for(i=0;i<5;i++){
+                    if(aluno[i].media>maior){
+                        x = i;
+
+
+                    }
+
+                }
+
+                printf("O aluno(a) com melhor média é o(a) %s\n",aluno[x].nome);
+                printf("Suas notas foram %.1f %.1f e %.1f",aluno[x].nota1, aluno[x].nota2, aluno[x].nota3);
+
+
+
+
+
+
+
+
+
+
+
+
+    return 0;
+}
